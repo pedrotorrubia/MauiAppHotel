@@ -59,7 +59,7 @@
                                TextColor="{StaticResource Primary}"/>
 
                             <Picker x:Name="pck_quarto"
-                                Title="Selecione sua Acomodação" />
+                                Title="Selecione sua Acomodação" />                            
                         </VerticalStackLayout>
                     </Frame>
 
@@ -75,22 +75,26 @@
                             <Grid>
                                 <HorizontalStackLayout HorizontalOptions="Center">
                                     <Label Text="Check-in:" />
-                                    <DatePicker x:Name="dtpck_checkin"
-                                        Format="dd/MM/yyyy" />
+                                    <DatePicker 
+                                        x:Name="dtpck_checkin"
+                                        Format="dd/MM/yyyy"
+                                        DateSelected="dtpck_checkin_DateSelected" />
                                 </HorizontalStackLayout>
                             </Grid>
 
                             <Grid>
                                 <HorizontalStackLayout HorizontalOptions="Center">
                                     <Label Text="Check-out:" />
-                                    <DatePicker x:Name="dtpck_checkout"
-                                        Format="dd/MM/yyyy" />
+                                    <DatePicker 
+                                        x:Name="dtpck_checkout"
+                                        Format="dd/MM/yyyy" 
+                                        DateSelected="dtpck_checkout_DateSelected"/>
                                 </HorizontalStackLayout>
                             </Grid>
                         </VerticalStackLayout>
                     </Frame>
 
-                    <Button Text="Avançar"  />
+                    <Button Text="Avançar"  Clicked="Button_Clicked"/>
 
                     <Button Text="Sobre" Padding="10" Margin="10" Clicked="btn_sobre_Clicked" />
 

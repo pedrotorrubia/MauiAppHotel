@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.ResumoEstadia"
+             Title="Resumo da Estadia"
+             BackgroundColor= "{StaticResource Gray100}">
+    
+    <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="Center">
+        <Label 
+            Text="Resumo da Estadia"
+            FontSize="32"
+            FontFamily="Kalom"
+            TextColor="{StaticResource Primary}"
+            HorizontalOptions="Center" />
+
+        <Frame Padding="15" CornerRadius="10">
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto"
+                  ColumnDefinitions="Auto, *"
+                  RowSpacing="10"
+                  ColumnSpacing="10">
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Quarto: " FontSize="16" FontAttributes="Bold"/>
+                <Label Grid.Row="0" Grid.Column="1" x:Name="lblQuarto" FontSize="16"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Check-in: " FontSize="16" FontAttributes="Bold"/>
+                <Label Grid.Row="1" Grid.Column="1" x:Name="lblCheckIn" FontSize="16"/>
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Check-out: " FontSize="16" FontAttributes="Bold"/>
+                <Label Grid.Row="2" Grid.Column="1" x:Name="lblCheckOut" FontSize="16"/>
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Pessoas: " FontSize="16" FontAttributes="Bold"/>
+                <Label Grid.Row="3" Grid.Column="1" x:Name="lblPessoas" FontSize="16"/>
+
+                <Label Grid.Row="4" Grid.Column="0" Text="Total de diárias: " FontSize="16" FontAttributes="Bold"/>
+                <Label Grid.Row="4" Grid.Column="1" x:Name="lblDias" FontSize="16"/>
+
+                <Label Grid.Row="5" Grid.Column="0" Text="Valor Total: " FontSize="16" FontAttributes="Bold"/>
+                <Label Grid.Row="5" Grid.Column="1" x:Name="lblValorTotal" FontSize="16"/>
+
+            </Grid>       
+                 
+        </Frame>
+
+        <Button x:Name="btnConfirmar"
+                Text="Confirmar reserva"
+                Clicked="btnConfirmar_Clicked"
+                Margin="0, 20, 0, 0"/>
+
+        <Button x:Name="btnVoltar"
+                Text="Voltar"
+                BackgroundColor="Transparent"
+                TextColor="{StaticResource Gray900}"
+                BorderColor="{StaticResource Gray900}"
+                BorderWidth="1"
+                Clicked="btnVoltar_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>

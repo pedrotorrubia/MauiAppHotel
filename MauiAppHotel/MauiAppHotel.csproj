@@ -69,6 +69,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\ResumoEstadia.xaml.cs">
+	    <DependentUpon>ResumoEstadia.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\sobre.xaml.cs">
 	    <DependentUpon>Sobre.xaml</DependentUpon>
 	  </Compile>
@@ -79,6 +82,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\HospedagemContratada.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ResumoEstadia.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Sobre.xaml">
